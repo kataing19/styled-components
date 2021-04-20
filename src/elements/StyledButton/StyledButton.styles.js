@@ -1,29 +1,34 @@
 import styled, { css } from 'styled-components';
-import themes from '../themes';
+import colorPalette from '../colors';
 
-const { primary, neutral, red, yellow, green, blue, orange } = themes;
+const { neutral } = colorPalette;
 
 const Button = styled.button(({ activated, variant, color, iconPosition }) => {
+  const selectedColor = colorPalette[color];
+  let baseIndex = color === 'neutral' ? 11 : 5;
+  let hoverIndex = baseIndex + 1;
+
   const contained = {
     textColor: neutral[1],
-    backgroundColor: themes[color][5],
+    backgroundColor: selectedColor[baseIndex],
     border: 'none',
-    hoverBackgroundColor: themes[color][7],
+    hoverBackgroundColor: selectedColor[hoverIndex],
   };
 
   const outlined = {
-    textColor: themes[color][5],
+    textColor: selectedColor[baseIndex],
     backgroundColor: neutral[3],
     border: `1px solid ${neutral[6]}`,
-    hoverColor: themes[color][7],
+    hoverColor: selectedColor[hoverIndex],
     hoverBackgroundColor: neutral[5],
   };
 
   const text = {
-    textColor: themes[color][5],
+    textColor: selectedColor[baseIndex],
     backgroundColor: 'none',
     border: 'none',
-    hoverColor: themes[color][7],
+    hoverColor: selectedColor[hoverIndex],
+    hoverBackgroundColor: neutral[3],
   };
 
   const variantStyles = {
