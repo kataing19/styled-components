@@ -63,30 +63,30 @@ function App() {
           </StyledButton>
         </div>
         <div>
-          <h2>Text Buttons</h2>
-          <StyledButton variant="text" color="neutral">
-            Text Neutral
+          <h2>Minimal Buttons</h2>
+          <StyledButton variant="minimal" color="neutral">
+            Minimal Neutral
           </StyledButton>
-          <StyledButton variant="text" color="red">
-            Text Red
+          <StyledButton variant="minimal" color="red">
+            Minimal Red
           </StyledButton>
-          <StyledButton variant="text" color="orange">
-            Text Orange
+          <StyledButton variant="minimal" color="orange">
+            Minimal Orange
           </StyledButton>
-          <StyledButton variant="text" color="yellow">
-            Text Yellow
+          <StyledButton variant="minimal" color="yellow">
+            Minimal Yellow
           </StyledButton>
-          <StyledButton variant="text" color="green">
-            Text Green
+          <StyledButton variant="minimal" color="green">
+            Minimal Green
           </StyledButton>
-          <StyledButton variant="text" color="blue">
-            Text Blue
+          <StyledButton variant="minimal" color="blue">
+            Minimal Blue
           </StyledButton>
-          <StyledButton variant="text" color="purple">
-            Text Purple
+          <StyledButton variant="minimal" color="purple">
+            Minimal Purple
           </StyledButton>
-          <StyledButton variant="text" color="purple" disabled>
-            Text Purple Disabled
+          <StyledButton variant="minimal" color="purple" disabled>
+            Minimal Purple Disabled
           </StyledButton>
         </div>
       </div>
@@ -97,37 +97,37 @@ function App() {
         <div>
           <h2>Contained Buttons</h2>
           <StyledButton variant="contained" color="blue" size="small">
-            Small Text
+            Small Contained
           </StyledButton>
           <StyledButton variant="contained" color="blue" size="medium">
-            Medium Text
+            Medium Contained
           </StyledButton>
           <StyledButton variant="contained" color="blue" size="large">
-            Large Text
+            Large Contained
           </StyledButton>
         </div>
         <div>
           <h2>Outlined Buttons</h2>
           <StyledButton variant="outlined" color="blue" size="small">
-            Small Text
+            Small Outlined
           </StyledButton>
           <StyledButton variant="outlined" color="blue" size="medium">
-            Medium Text
+            Medium Outlined
           </StyledButton>
           <StyledButton variant="outlined" color="blue" size="large">
-            Large Text
+            Large Outlined
           </StyledButton>
         </div>
         <div>
-          <h2>Text Buttons</h2>
-          <StyledButton variant="text" color="neutral" size="small">
-            Small Text
+          <h2>Minimal Buttons</h2>
+          <StyledButton variant="minimal" color="neutral" size="small">
+            Small Minimal
           </StyledButton>
-          <StyledButton variant="text" color="neutral" size="medium">
-            Medium Text
+          <StyledButton variant="minimal" color="neutral" size="medium">
+            Medium Minimal
           </StyledButton>
-          <StyledButton variant="text" color="neutral" size="large">
-            Large Text
+          <StyledButton variant="minimal" color="neutral" size="large">
+            Large Minimal
           </StyledButton>
         </div>
       </div>
