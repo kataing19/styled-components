@@ -99,6 +99,14 @@ const blue = [
 //   '#021F47',
 // ];
 
-const purple = [];
+const purple = [
+  '#ECEBFF',
+  '#CFC4DE',
+  '#B19DBD',
+  '#94769C',
+  '#764E7B',
+  '#59275A',
+  '#3B0039',
+];
 
 export default { neutral, red, orange, yellow, green, blue, purple };
