@@ -5,7 +5,7 @@
   margin: 50px;
 }
 
-.row {
+.horizontal {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

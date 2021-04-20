@@ -7,12 +7,9 @@ function App() {
       <div>
         <h1>Theme</h1>
       </div>
-      <div className="row">
+      <div className="horizontal">
         <div>
           <h2>Contained Buttons</h2>
-          <StyledButton variant="contained" color="primary" submit>
-            Contained Primary
-          </StyledButton>
           <StyledButton variant="contained" color="neutral">
             Contained Neutral
           </StyledButton>
@@ -34,9 +31,6 @@ function App() {
         </div>
         <div>
           <h2>Outlined Buttons</h2>
-          <StyledButton variant="outlined" color="primary">
-            Outlined Primary
-          </StyledButton>
           <StyledButton variant="outlined" color="neutral">
             Outlined Neutral
           </StyledButton>
@@ -58,9 +52,6 @@ function App() {
         </div>
         <div>
           <h2>Text Buttons</h2>
-          <StyledButton variant="text" color="primary">
-            Text Primary
-          </StyledButton>
           <StyledButton variant="text" color="neutral">
             Text Neutral
           </StyledButton>
@@ -84,13 +75,13 @@ function App() {
       <div>
         <h1>Size</h1>
       </div>
-      <div className="row">
+      <div className="horizontal">
         <div>
           <h2>Contained Buttons</h2>
-          <StyledButton variant="contained" color="primary" size="small">
+          <StyledButton variant="contained" color="blue" size="small">
             Small Text
           </StyledButton>
-          <StyledButton variant="contained" color="neutral" size="medium">
+          <StyledButton variant="contained" color="yellow" size="medium">
             Medium Text
           </StyledButton>
           <StyledButton variant="contained" color="red" size="large">
@@ -99,10 +90,10 @@ function App() {
         </div>
         <div>
           <h2>Outlined Buttons</h2>
-          <StyledButton variant="outlined" color="primary" size="small">
+          <StyledButton variant="outlined" color="blue" size="small">
             Small Text
           </StyledButton>
-          <StyledButton variant="outlined" color="neutral" size="medium">
+          <StyledButton variant="outlined" color="yellow" size="medium">
             Medium Text
           </StyledButton>
           <StyledButton variant="outlined" color="red" size="large">
@@ -111,7 +102,7 @@ function App() {
         </div>
         <div>
           <h2>Text Buttons</h2>
-          <StyledButton variant="text" color="primary" size="small">
+          <StyledButton variant="text" color="blue" size="small">
             Small Text
           </StyledButton>
           <StyledButton variant="text" color="neutral" size="medium">
