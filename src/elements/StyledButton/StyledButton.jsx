@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { array, oneOf, func, object, boolean } from 'prop-types';
+import { string, oneOf, func, object, boolean } from 'prop-types';
 import Button from './StyledButton.styles';
 
 const StyledButton = ({
   children,
   variant,
   color,
+  size,
   onClick,
   startIcon,
   endIcon,
@@ -26,7 +27,9 @@ const StyledButton = ({
       activated={false}
       variant={variant}
       color={color}
+      size={size}
       onClick={handleOnClick}
+      disabled={disabled}
     >
       {startIcon && startIcon}
       {children}
@@ -36,32 +39,24 @@ const StyledButton = ({
 };
 
 StyledButton.propTypes = {
-  type: oneOf(['button', 'submit']),
-  children: array,
-
-  // These all affect the appearance of the type of button we want to display
-  // theme: oneOf(['solid', 'outline', 'borderless']),
-  // appearance: oneOf(['default', 'primary', 'minimal']),
-  variant: oneOf(['contained', 'outlined', 'text']),
-
-  // These all affect the color of the button we want to display
+  children: string,
+  variant: oneOf(['contained', 'outlined', 'minimal']),
   color: oneOf([
-    'primary',
     'neutral',
     'red',
+    'orange',
     'yellow',
     'green',
     'blue',
-    'orange',
+    'purple',
   ]),
-  // intent: oneOf(['none', 'error', 'warning', 'success', 'information', 'in progress']), // Do we want to consolidate primary blue with blue?
-
   size: oneOf(['small', 'medium', 'large']),
   onClick: func,
   startIcon: object,
   endIcon: object,
   activatable: boolean,
   disabled: boolean,
+  submit: boolean,
 };
 
 export default StyledButton;
