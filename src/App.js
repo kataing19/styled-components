@@ -16,6 +16,9 @@ function App() {
           <StyledButton variant="contained" color="red">
             Contained Red
           </StyledButton>
+          <StyledButton variant="contained" color="orange">
+            Contained Orange
+          </StyledButton>
           <StyledButton variant="contained" color="yellow">
             Contained Yellow
           </StyledButton>
@@ -25,8 +28,11 @@ function App() {
           <StyledButton variant="contained" color="blue">
             Contained Blue
           </StyledButton>
-          <StyledButton variant="contained" color="orange">
-            Contained Orange
+          <StyledButton variant="contained" color="purple">
+            Contained Purple
+          </StyledButton>
+          <StyledButton variant="contained" color="purple" disabled>
+            Contained Purple Disabled
           </StyledButton>
         </div>
         <div>
@@ -37,6 +43,9 @@ function App() {
           <StyledButton variant="outlined" color="red">
             Outlined Red
           </StyledButton>
+          <StyledButton variant="outlined" color="orange">
+            Outlined Orange
+          </StyledButton>
           <StyledButton variant="outlined" color="yellow">
             Outlined Yellow
           </StyledButton>
@@ -46,8 +55,11 @@ function App() {
           <StyledButton variant="outlined" color="blue">
             Outlined Blue
           </StyledButton>
-          <StyledButton variant="outlined" color="orange">
-            Outlined Orange
+          <StyledButton variant="outlined" color="purple">
+            Outlined Purple
+          </StyledButton>
+          <StyledButton variant="outlined" color="purple" disabled>
+            Outlined Purple Disabled
           </StyledButton>
         </div>
         <div>
@@ -58,6 +70,9 @@ function App() {
           <StyledButton variant="text" color="red">
             Text Red
           </StyledButton>
+          <StyledButton variant="text" color="orange">
+            Text Orange
+          </StyledButton>
           <StyledButton variant="text" color="yellow">
             Text Yellow
           </StyledButton>
@@ -67,8 +82,11 @@ function App() {
           <StyledButton variant="text" color="blue">
             Text Blue
           </StyledButton>
-          <StyledButton variant="text" color="orange">
-            Text Orange
+          <StyledButton variant="text" color="purple">
+            Text Purple
+          </StyledButton>
+          <StyledButton variant="text" color="purple" disabled>
+            Text Purple Disabled
           </StyledButton>
         </div>
       </div>
@@ -81,10 +99,10 @@ function App() {
           <StyledButton variant="contained" color="blue" size="small">
             Small Text
           </StyledButton>
-          <StyledButton variant="contained" color="yellow" size="medium">
+          <StyledButton variant="contained" color="blue" size="medium">
             Medium Text
           </StyledButton>
-          <StyledButton variant="contained" color="red" size="large">
+          <StyledButton variant="contained" color="blue" size="large">
             Large Text
           </StyledButton>
         </div>
@@ -93,22 +111,22 @@ function App() {
           <StyledButton variant="outlined" color="blue" size="small">
             Small Text
           </StyledButton>
-          <StyledButton variant="outlined" color="yellow" size="medium">
+          <StyledButton variant="outlined" color="blue" size="medium">
             Medium Text
           </StyledButton>
-          <StyledButton variant="outlined" color="red" size="large">
+          <StyledButton variant="outlined" color="blue" size="large">
             Large Text
           </StyledButton>
         </div>
         <div>
           <h2>Text Buttons</h2>
-          <StyledButton variant="text" color="blue" size="small">
+          <StyledButton variant="text" color="neutral" size="small">
             Small Text
           </StyledButton>
           <StyledButton variant="text" color="neutral" size="medium">
             Medium Text
           </StyledButton>
-          <StyledButton variant="text" color="red" size="large">
+          <StyledButton variant="text" color="neutral" size="large">
             Large Text
           </StyledButton>
         </div>
