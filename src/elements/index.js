@@ -1,3 +1,3 @@
-import Button from './Button/Button.jsx';
+import StyledButton from './StyledButton/StyledButton.jsx';
 
-export { Button }; 
+export { StyledButton };
