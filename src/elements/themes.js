@@ -1,19 +1,5 @@
-// primary color
-export const primary = [
-  'filler',
-  '#d5edff',
-  '#a0cbeb',
-  '#6ba9d7',
-  '#3587c2',
-  '#0065ae',
-  '#00518c',
-  '#003d6a',
-  '#002947',
-  '#001525',
-];
-
-// neutrals
-export const neutral = [
+// neutrals - used for default button
+const neutral = [
   'filler',
   '#FEFEFE',
   '#F9FAFA',
@@ -32,8 +18,22 @@ export const neutral = [
   '#080909',
 ];
 
+// primary color -- blue
+const primary = [
+  'filler',
+  '#d5edff',
+  '#a0cbeb',
+  '#6ba9d7',
+  '#3587c2',
+  '#0065ae',
+  '#00518c',
+  '#003d6a',
+  '#002947',
+  '#001525',
+];
+
 // error
-export const red = [
+const red = [
   'filler',
   '#FFECEB',
   '#FFA09D',
@@ -45,7 +45,7 @@ export const red = [
 ];
 
 // warning
-export const yellow = [
+const yellow = [
   'filler',
   '#FFFCEB',
   '#FFEE9D',
@@ -57,7 +57,7 @@ export const yellow = [
 ];
 
 // success
-export const green = [
+const green = [
   'filler',
   '#ECFAEC',
   '#A9D5A9',
@@ -69,7 +69,7 @@ export const green = [
 ];
 
 // information
-export const blue = [
+const blue = [
   'filler',
   '#E6F0FE',
   '#9BC1F4',
@@ -81,7 +81,7 @@ export const blue = [
 ];
 
 // in progress
-export const orange = [
+const orange = [
   'filler',
   '#FFEADB',
   '#FFC39A',
@@ -91,3 +91,5 @@ export const orange = [
   '#7E3808',
   '#3E1900',
 ];
+
+export default { primary, neutral, red, yellow, green, blue, orange };
