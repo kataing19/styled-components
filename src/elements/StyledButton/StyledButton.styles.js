@@ -1,30 +1,43 @@
 import styled, { css } from 'styled-components';
-import colorPalette from '../colors';
+import colorPalette from '../../colors';
 
-const { neutral } = colorPalette;
+const { neutral, blue } = colorPalette;
 
 const Button = styled.button(
-  ({ variant, color, size, disabled, activatediconPosition }) => {
+  ({ variant, color, size, disabled, activated, startIcon, endIcon }) => {
     const selectedColor = colorPalette[color];
     let baseIndex = color === 'neutral' ? 11 : 5;
     let hoverIndex = baseIndex + 1;
 
-    const contained = {
+    const baseStyle = {
+      textColor: neutral[neutral.length],
+      backgroundColor: 'none',
+      border: 'none',
+      paddingLeft: endIcon ? '10px' : 0,
+      paddingRight: startIcon ? '10px' : 0,
+    };
+
+    let contained = {
+      disabled: {
+        textColor: neutral[7],
+        backgroundColor: neutral[4],
+      },
       textColor: neutral[1],
       backgroundColor: selectedColor[baseIndex],
-      border: 'none',
       hoverBackgroundColor: selectedColor[hoverIndex],
     };
 
-    const disabledContained = {
-      textColor: neutral[7],
-      backgroundColor: neutral[4],
-      border: `1px solid ${neutral[6]}`,
-      hoverColor: neutral[7],
-      hoverBackgroundColor: neutral[4],
-    };
-
     const outlined = {
+      disabled: {
+        textColor: neutral[7],
+        backgroundColor: neutral[4],
+        border: `1px solid ${neutral[6]}`,
+      },
+      activated: {
+        backgroundColor: selectedColor[baseIndex - 4],
+        border: `1px solid ${selectedColor[baseIndex + 1]}`,
+        textColor: selectedColor[baseIndex],
+      },
       textColor: selectedColor[baseIndex],
       backgroundColor: neutral[3],
       border: `1px solid ${neutral[6]}`,
@@ -32,15 +45,10 @@ const Button = styled.button(
       hoverBackgroundColor: neutral[5],
     };
 
-    const disabledOutline = {
-      textColor: neutral[7],
-      backgroundColor: neutral[4],
-      border: `1px solid ${neutral[6]}`,
-      hoverColor: neutral[7],
-      hoverBackgroundColor: neutral[4],
-    };
-
     const minimal = {
+      disabled: {
+        textColor: neutral[7],
+      },
       textColor: selectedColor[baseIndex],
       backgroundColor: 'none',
       border: 'none',
@@ -48,18 +56,52 @@ const Button = styled.button(
       hoverBackgroundColor: neutral[3],
     };
 
-    const disabledMinimal = {
-      textColor: neutral[7],
-      backgroundColor: neutral[4],
-      border: `none`,
-      hoverColor: neutral[7],
-      hoverBackgroundColor: neutral[4],
+    const variantStyles = {
+      contained,
+      outlined,
+      minimal,
     };
 
-    const variantStyles = {
-      contained: disabled ? disabledContained : contained,
-      outlined: disabled ? disabledOutline : outlined,
-      minimal: disabled ? disabledMinimal : minimal,
+    const small = {
+      height: '32px',
+      fontSize: '14px',
+    };
+
+    const medium = {
+      height: '36px',
+      fontSize: '16px',
+    };
+
+    const large = {
+      height: '40px',
+      fontSize: '20px',
+    };
+
+    const sizeStyles = {
+      small,
+      medium,
+      large,
+    };
+
+    const getStyle = () => {
+      let style = baseStyle;
+      const selectedStyle = variantStyles[variant];
+      const disabledStyle = selectedStyle.disabled;
+      const activatedStyle = selectedStyle.activated;
+
+      if (size) {
+        style = { ...style, ...sizeStyles[size] }; // We might want to select a default size
+      }
+
+      if (disabled) {
+        return { ...style, ...disabledStyle };
+      }
+
+      if (activated) {
+        return { ...style, ...activatedStyle };
+      }
+
+      return { ...style, ...selectedStyle };
     };
 
     const {
@@ -68,15 +110,17 @@ const Button = styled.button(
       border,
       hoverColor,
       hoverBackgroundColor,
-    } = variantStyles[variant];
+      height,
+      fontSize,
+      paddingLeft,
+      paddingRight,
+    } = getStyle();
 
     return css`
-      // General Website Styling
-      font-family: 'Nunito Sans', sans-serif;
-
       // General Button Styling
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
       align-items: center;
       padding: 4px 16px;
 
@@ -91,23 +135,36 @@ const Button = styled.button(
       flex-grow: 0;
       margin: 8px 0;
 
+      outline: none;
+      cursor: pointer;
+
       // Dynamic Button Styling
       background: ${backgroundColor};
       border: ${border};
       box-sizing: border-box;
       border-radius: 5px;
+      /* height: ${height}; */
 
       // General Text Styling
-      font-size: 14px;
       font-weight: 600;
       line-height: 22px;
 
       // Dynamic  Text Styling
       color: ${textColor};
+      font-size: ${fontSize};
 
-      &:hover {
+      &:hover:enabled {
         background: ${hoverBackgroundColor};
         color: ${hoverColor};
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+
+      .icon {
+        padding-left: ${paddingLeft};
+        padding-right: ${paddingRight};
       }
     `;
   }

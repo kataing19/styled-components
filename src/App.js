@@ -1,5 +1,7 @@
+import './reset.css';
 import './App.css';
 import { StyledButton } from './elements/index.js';
+import { StyledCheck } from './icons/index.js';
 
 function App() {
   return (
@@ -10,17 +12,23 @@ function App() {
       <div className="horizontal">
         <div>
           <h2>Contained Buttons</h2>
-          <StyledButton variant="contained" color="neutral">
+          <StyledButton
+            variant="contained"
+            color="neutral"
+            startIcon={StyledCheck}
+          >
             Contained Neutral
           </StyledButton>
-          <StyledButton variant="contained" color="red">
+          <StyledButton variant="contained" color="red" endIcon={StyledCheck}>
             Contained Red
           </StyledButton>
           <StyledButton variant="contained" color="orange">
+            <StyledCheck variant="startIcon" />
             Contained Orange
           </StyledButton>
           <StyledButton variant="contained" color="yellow">
             Contained Yellow
+            <StyledCheck variant="endIcon" />
           </StyledButton>
           <StyledButton variant="contained" color="green">
             Contained Green
@@ -37,25 +45,37 @@ function App() {
         </div>
         <div>
           <h2>Outlined Buttons</h2>
-          <StyledButton variant="outlined" color="neutral">
+          <StyledButton
+            variant="outlined"
+            color="neutral"
+            activatable
+            startIcon={StyledCheck}
+          >
             Outlined Neutral
           </StyledButton>
-          <StyledButton variant="outlined" color="red">
+          <StyledButton
+            variant="outlined"
+            color="red"
+            activatabl
+            endIcon={StyledCheck}
+          >
             Outlined Red
           </StyledButton>
-          <StyledButton variant="outlined" color="orange">
+          <StyledButton variant="outlined" color="orange" activatable>
+            <StyledCheck variant="startIcon" />
             Outlined Orange
           </StyledButton>
-          <StyledButton variant="outlined" color="yellow">
+          <StyledButton variant="outlined" color="yellow" activatable>
             Outlined Yellow
+            <StyledCheck variant="endIcon" />
           </StyledButton>
-          <StyledButton variant="outlined" color="green">
+          <StyledButton variant="outlined" color="green" activatable>
             Outlined Green
           </StyledButton>
-          <StyledButton variant="outlined" color="blue">
+          <StyledButton variant="outlined" color="blue" activatable>
             Outlined Blue
           </StyledButton>
-          <StyledButton variant="outlined" color="purple">
+          <StyledButton variant="outlined" color="purple" activatable>
             Outlined Purple
           </StyledButton>
           <StyledButton variant="outlined" color="purple" disabled>
