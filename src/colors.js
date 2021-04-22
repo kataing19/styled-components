@@ -109,4 +109,6 @@ const purple = [
   '#3B0039',
 ];
 
-export default { neutral, red, orange, yellow, green, blue, purple };
+const colorPalette = { neutral, red, orange, yellow, green, blue, purple };
+
+export default colorPalette;
