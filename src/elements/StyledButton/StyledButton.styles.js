@@ -50,8 +50,6 @@ const Button = styled.button(
         textColor: neutral[7],
       },
       textColor: selectedColor[baseIndex],
-      backgroundColor: 'none',
-      border: 'none',
       hoverColor: selectedColor[hoverIndex],
       hoverBackgroundColor: neutral[3],
     };
